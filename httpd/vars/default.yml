@@ -1,0 +1,6 @@
+mysql_root_password: "redhat"
+mysql_db: "wpdb"
+mysql_user: "wpuser"
+mysql_password: "password"
+
+doc_root: "/var/www/html"

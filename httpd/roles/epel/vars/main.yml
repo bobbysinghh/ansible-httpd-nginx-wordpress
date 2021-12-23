@@ -1,0 +1,7 @@
+packages:
+     -  "https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
+     - curl
+     - wget
+     - python36
+     - tar
+

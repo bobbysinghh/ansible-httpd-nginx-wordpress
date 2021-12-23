@@ -1,0 +1,7 @@
+- name: Install php packages
+  yum:
+       name: "{{ item }}"
+       state: present
+       disable_gpg_check: no
+  loop: "{{ packages }}"
+

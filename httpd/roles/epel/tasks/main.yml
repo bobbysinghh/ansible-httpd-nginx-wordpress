@@ -1,0 +1,16 @@
+- name: installing Epel and other dependent packages
+  yum:
+       name: "{{ item }}"
+       state: present
+       disable_gpg_check: no
+  loop: "{{ packages }}"
+- name: Upgrade all packages
+  yum:
+       name: "*"
+       state: latest
+- name: install python lib
+  pip:
+       name: pymysql
+       state: present
+       executable: pip3
+

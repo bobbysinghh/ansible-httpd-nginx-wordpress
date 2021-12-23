@@ -1,0 +1,16 @@
+- name: installing firewall packages
+  yum: 
+       name: "{{ packages }}"
+       state: present
+- name: Creating rules for http and https
+  firewalld: 
+       zone: public
+       service: "{{ item }}"
+       permanent: true
+       immediate: true
+       state: enabled
+  loop: "{{ rule }}"
+- name: Restart firewall service
+  service:
+       name: "{{ service }}"
+       state: reloaded

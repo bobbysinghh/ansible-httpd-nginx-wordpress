@@ -1,0 +1,10 @@
+packages:
+          - php-fpm
+          - php-common
+          - php-mysqlnd
+          - php-gd
+          - php-xml
+          - php-mbstring
+          - php-xml
+          - php
+

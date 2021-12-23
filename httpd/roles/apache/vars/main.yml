@@ -1,0 +1,5 @@
+---
+# vars file for webserver
+packages: "httpd"
+doc_root: "/var/www/html"
+service: "httpd"

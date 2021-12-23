@@ -1,0 +1,23 @@
+- name: Install HTTP packages
+  yum:
+     name: "{{ packages }}"
+     state: latest
+- name: Start httpd service
+  service:
+          name: "{{ service }}"
+          state: started
+          enabled: true
+- name: Create Apache Document Root
+  file:
+    path: "{{ doc_root }}"
+    state: directory
+    owner: "apache"
+    group: "apache"
+    mode: '0755'
+- name: Set up Apache VirtualHost
+  template:
+    src: "files/httpd.conf"
+    dest: "/etc/httpd/conf.d/example.conf"
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r

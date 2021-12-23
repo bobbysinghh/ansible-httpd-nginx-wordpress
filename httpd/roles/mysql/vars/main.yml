@@ -1,0 +1,7 @@
+packages:
+      - mysql-server
+      - php-mysqlnd
+      - python3-PyMySQL
+
+service: mysqld
+

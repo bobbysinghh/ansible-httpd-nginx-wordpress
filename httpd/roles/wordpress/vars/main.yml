@@ -1,0 +1,4 @@
+tar_file: https://wordpress.org/latest.tar.gz
+doc_root: "/var/www/html"
+service: httpd
+
